@@ -1,8 +1,10 @@
-package com.example.tubeerhai.data.model
+package com.example.tubeerhai.data.dto
+
+import com.example.tubeerhai.data.model.BeerModel
 
 data class BeersListDtoItem(
     val abv: Double,
-    val attenuation_level: Int,
+    val attenuation_level: Double,
     val boil_volume: BoilVolume,
     val brewers_tips: String,
     val contributed_by: String,
@@ -17,9 +19,19 @@ data class BeersListDtoItem(
     val method: Method,
     val name: String,
     val ph: Double,
-    val srm: Int,
+    val srm: Double,
     val tagline: String,
     val target_fg: Int,
     val target_og: Double,
     val volume: Volume
-)
+) {
+    fun toBeerModel(): BeerModel {
+        return BeerModel(
+            name = name,
+            description = description,
+            tagline = tagline,
+            imageUrl = image_url,
+            brewersTips = brewers_tips
+        )
+    }
+}

@@ -1,4 +1,4 @@
-package com.example.tubeerhai.data.model
+package com.example.tubeerhai.data.dto
 
 data class Volume(
     val unit: String,
