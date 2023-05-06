@@ -27,6 +27,7 @@ data class BeersListDtoItem(
 ) {
     fun toBeerModel(): BeerModel {
         return BeerModel(
+            id = id,
             name = name,
             description = description,
             tagline = tagline,
