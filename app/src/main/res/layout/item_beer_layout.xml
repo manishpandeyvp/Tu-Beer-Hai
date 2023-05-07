@@ -6,51 +6,96 @@
     android:padding="10dp"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/iv_beer_image"
-        android:layout_width="180dp"
-        android:layout_height="220dp"
-        android:padding="10dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/img"/>
+        android:background="@color/orange"
+        app:cardBackgroundColor="@color/orange">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/iv_beer_image"
-        app:layout_constraintStart_toEndOf="@id/iv_beer_image"
-        tools:text="Trashy Blonde"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_tag_line"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
-        app:layout_constraintStart_toEndOf="@id/iv_beer_image"
-        tools:text="You know you shouldn't You know you shouldn't"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:textColor="#232323"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_beer_image"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/orange"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardBackgroundColor="@color/white"
+                tools:layout_editor_absoluteX="30dp">
 
-    <ImageView
-        android:id="@+id/iv_share"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:src="@drawable/ic_share"
-        android:background="@drawable/bg_circular_lined_black"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_tag_line"
-        app:layout_constraintStart_toEndOf="@id/iv_beer_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
+                <ImageView
+                    android:id="@+id/iv_beer_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/beer_image"
+                    tools:src="@drawable/img"
+                    android:padding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_beer_image"-->
+<!--                android:layout_width="180dp"-->
+<!--                android:layout_height="220dp"-->
+<!--                android:padding="10dp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                tools:src="@drawable/img"/>-->
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/cv_beer_image"
+                app:layout_constraintStart_toEndOf="@id/cv_beer_image"
+                tools:text="Trashy Blonde Trashy Blonde Trashy Blonde"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tv_tag_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                app:layout_constraintStart_toEndOf="@id/cv_beer_image"
+                tools:text="You know you shouldn't You know you shouldn't"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"/>
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_share"
+                android:padding="10dp"
+                app:tint="#FFFFFF"
+                android:contentDescription="@string/share_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

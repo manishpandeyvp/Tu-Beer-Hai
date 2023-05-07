@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Tu Beer Hai</string>
     <string name="error_text">Some unexpected error Occurred. Sorry for inconvenience. :(</string>
+    <string name="first_brewed">First Brewed: %1$s</string>
+    <string name="brewers_tip">Brewer\'s Tip:</string>
+    <string name="info_icon">info icon</string>
+    <string name="beer_image">beer image</string>
+    <string name="share_icon">share icon</string>
 </resources>
