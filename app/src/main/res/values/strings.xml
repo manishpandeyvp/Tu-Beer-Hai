@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tu Beer Hai</string>
+    <string name="error_text">Some unexpected error Occurred. Sorry for inconvenience. :(</string>
 </resources>

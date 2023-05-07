@@ -32,7 +32,8 @@ data class BeersListDtoItem(
             description = description,
             tagline = tagline,
             imageUrl = image_url,
-            brewersTips = brewers_tips
+            brewersTips = brewers_tips,
+            firstBrewed = first_brewed
         )
     }
 }

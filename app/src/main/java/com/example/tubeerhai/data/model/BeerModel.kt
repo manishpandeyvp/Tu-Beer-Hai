@@ -7,4 +7,5 @@ data class BeerModel (
     val tagline: String,
     val description: String,
     val brewersTips: String,
+    val firstBrewed: String
 )

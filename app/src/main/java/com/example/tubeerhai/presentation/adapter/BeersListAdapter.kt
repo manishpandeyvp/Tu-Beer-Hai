@@ -24,7 +24,7 @@ class BeersListAdapter(
         val beerShare: ImageView = view.findViewById(R.id.iv_share)
     }
 
-    private var onLongClickListener: OnClickListener? = null
+    private var onClickListener: OnClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeersViewHolder {
         return BeersViewHolder(LayoutInflater.from(context).inflate(R.layout.item_beer_layout, parent, false))
@@ -40,7 +40,11 @@ class BeersListAdapter(
         holder.beerName.text = model.name
         holder.beerTagLine.text = model.tagline
         holder.beerShare.setOnClickListener {
-            onLongClickListener?.onClick(position, model)
+            onClickListener?.onClick(position, model)
+        }
+        holder.itemView.setOnLongClickListener {
+            onClickListener?.onLongClick(position, model)
+            true
         }
     }
 
@@ -52,9 +56,10 @@ class BeersListAdapter(
 
     interface OnClickListener {
         fun onClick(position: Int, model: BeerModel)
+        fun onLongClick(position: Int, model:BeerModel)
     }
 
     fun setOnClickListener(onClickListener: OnClickListener) {
-        this.onLongClickListener = onClickListener
+        this.onClickListener = onClickListener
     }
 }
