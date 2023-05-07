@@ -5,8 +5,6 @@ import com.example.tubeerhai.data.repository.MyBeersRepositoryImpl
 import com.example.tubeerhai.domain.repository.MyBeersRepository
 import com.example.tubeerhai.domain.usecase.GetAllBearsUseCase
 import com.example.tubeerhai.domain.usecase.GetAllBearsUseCaseImpl
-import com.example.tubeerhai.domain.usecase.GetBeerDataWithIdUseCase
-import com.example.tubeerhai.domain.usecase.GetBeerDataWithIdUseCaseImpl
 import com.example.tubeerhai.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -34,12 +32,6 @@ object AppModule {
     @Singleton
     fun provideMyBeersRepository(beersApiService: BeersApiService): MyBeersRepository {
         return MyBeersRepositoryImpl(beersApiService)
-    }
-
-    @Provides
-    @Singleton
-    fun providesGetBeerDataWithIdUseCase(beersRepository: MyBeersRepository): GetBeerDataWithIdUseCase {
-        return GetBeerDataWithIdUseCaseImpl(beersRepository)
     }
 
     @Provides

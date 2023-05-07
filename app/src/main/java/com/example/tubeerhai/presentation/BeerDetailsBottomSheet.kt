@@ -51,7 +51,7 @@ class BeerDetailsBottomSheet: BottomSheetDialogFragment() {
     }
 
     companion object {
-        const val DATA = "MODEL_DATA"
+        private const val DATA = "MODEL_DATA"
 
         fun newInstance(model: BeerModel): BeerDetailsBottomSheet {
             val bottomSheet = BeerDetailsBottomSheet()
